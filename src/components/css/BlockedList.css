@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&display=swap');
+
+.blocked-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff, #eaf7ff);
+  font-family: 'Hind', sans-serif;
+}
+
+.blocked-card {
+  background: linear-gradient(145deg, #ffffff, #f9fbff);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15),
+              0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  border: 1px solid rgba(25, 118, 210, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blocked-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.no-blocked {
+  font-size: 16px;
+  color: #888;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.blocked-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blocked-item {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.blocked-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.blocked-info h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.blocked-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.unblock-btn {
+  padding: 10px 18px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.unblock-btn:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+.tips {
+  margin-top: 30px;
+  padding: 18px;
+  background: #f7faff;
+  border-radius: 12px;
+  border-left: 4px solid #1976d2;
+}
+
+.tips h4 {
+  margin-bottom: 10px;
+  color: #1976d2;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tips ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .blocked-card {
+    padding: 25px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .blocked-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .unblock-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

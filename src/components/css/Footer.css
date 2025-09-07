@@ -1,0 +1,141 @@
+/* Make footer always at bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1; /* Push footer down */
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background: #121212;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  font-family: "Poppins", sans-serif;
+  margin-top: auto; /* ✅ keeps footer at bottom */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Logo & About */
+.footer-logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 12px;
+}
+.footer-about p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+/* Links */
+.footer-links h3,
+.footer-contact h3,
+.footer-newsletter h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+.footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-links ul li a:hover {
+  color: #ff9800;
+}
+
+/* Contact */
+.footer-contact p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #bbb;
+}
+
+/* Newsletter */
+.footer-newsletter p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #bbb;
+}
+.footer-newsletter form {
+  display: flex;
+  gap: 8px;
+}
+.footer-newsletter input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+.footer-newsletter button {
+  background: #ff9800;
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer-newsletter button:hover {
+  background: #e68900;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #888;
+}
+
+.footer-socials {
+  margin-bottom: 10px;
+}
+.footer-socials a {
+  font-size: 18px;
+  margin: 0 8px;
+  color: #bbb;
+  transition: 0.3s;
+}
+.footer-socials a:hover {
+  color: #ff9800;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+  .footer-newsletter button {
+    width: 100%;
+  }
+}

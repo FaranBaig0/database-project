@@ -1,0 +1,173 @@
+/* Dark background */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Glassmorphism Card */
+.register-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(25, 25, 25, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  max-width: 950px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Left image */
+.register-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right form */
+.register-form-container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.register-form-container h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.brand {
+  color: #00ffe7;
+  font-weight: bold;
+}
+
+.welcome-text {
+  font-size: 15px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* Form inputs */
+.register-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.register-form input:focus {
+  border-color: #00ffe7;
+  box-shadow: 0 0 10px #00ffe7;
+  outline: none;
+}
+
+/* ✅ Smaller Register Button */
+.register-form button {
+  width: 80%; /* smaller than full width */
+  align-self: center;
+  padding: 10px;
+  background: linear-gradient(90deg, #00ffe7, #0088ff);
+  color: #111;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s;
+}
+
+.register-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px #00ffe7;
+}
+
+/* ✅ Social buttons aligned side by side */
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.google-btn,
+.apple-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #333;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.google-btn:hover,
+.apple-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Links */
+.link-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.link-text a {
+  color: #00ffe7;
+  text-decoration: none;
+}
+
+.link-text a:hover {
+  text-decoration: underline;
+}
+
+.extra-info {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+.extra-info a {
+  color: #00ffe7;
+  text-decoration: none;
+}
+
+.extra-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-card {
+    grid-template-columns: 1fr;
+  }
+  .register-image {
+    display: none;
+  }
+  .register-form button {
+    width: 100%; /* Full width on mobile */
+  }
+  .social-login {
+    flex-direction: column;
+  }
+}

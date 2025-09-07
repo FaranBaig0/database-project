@@ -1,0 +1,124 @@
+/* GroupMembers.css */
+
+/* Container */
+.group-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #1e1e2f;
+  border-radius: 12px;
+  color: #e5e5e5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.group-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Link button */
+.link-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.link-btn {
+  background: #3a3a55;
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.link-btn:hover {
+  background: #4f4f75;
+}
+
+/* Add member form */
+.add-member-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.add-member-form input {
+  flex: 1;
+  padding: 10px;
+  background: #2b2b3d;
+  border: 1px solid #444;
+  border-radius: 6px 0 0 6px;
+  color: #fff;
+}
+
+.add-member-form button {
+  width: 45px; /* smaller than input */
+  background: #3a9a5f;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-member-form button:hover {
+  background: #48b06d;
+}
+
+/* Member list */
+.member-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.member-list li {
+  background: #2b2b3d;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-list span {
+  color: #e0e0e0;
+}
+
+.remove-btn {
+  width: 35px; /* smaller width */
+  height: 30px;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background: #e74c3c;
+}
+
+/* Leave button */
+.leave-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #6b2c2c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.leave-btn:hover {
+  background: #8e3b3b;
+}

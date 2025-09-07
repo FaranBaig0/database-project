@@ -1,0 +1,156 @@
+/* Full chat wrapper */
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #121212;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 12px 20px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #00c3ff;
+}
+
+.members-link {
+  text-decoration: none;
+  color: #00c3ff;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border: 1px solid #00c3ff;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.members-link:hover {
+  background: #00c3ff;
+  color: #000;
+}
+
+/* Chat box */
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Messages */
+.chat-message {
+  max-width: 65%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  line-height: 1.4;
+  position: relative;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.chat-message.sent {
+  align-self: flex-end;
+  background: #00c3ff;
+  color: #000;
+}
+
+.chat-message.received {
+  align-self: flex-start;
+  background: #2a2a2a;
+}
+
+/* Message metadata */
+.message-meta {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+/* Bubble */
+.message-bubble {
+  font-size: 0.95rem;
+  word-wrap: break-word;
+}
+
+/* Delete button */
+.delete-btn {
+  position: absolute;
+  bottom: -18px;
+  right: 6px;
+  background: transparent;
+  border: none;
+  color: #ff5c5c;
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.chat-message.sent:hover .delete-btn {
+  opacity: 1;
+}
+
+/* Input area */
+.chat-input {
+  display: flex;
+  padding: 12px;
+  background: #1e1e1e;
+  border-top: 1px solid #2a2a2a;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: border 0.2s, background 0.2s;
+}
+
+.chat-input input:focus {
+  border: 1px solid #00c3ff;
+  background: #333;
+}
+
+.chat-input button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #00c3ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.chat-input button:hover {
+  background: #009fcc;
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
