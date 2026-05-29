@@ -67,7 +67,13 @@ cd VERVAX
 # Install dependencies
 npm install
 ```
+```bash
+# Navigate to the server root
+cd VERVAX/server
 
+# Install dependencies
+npm run dev
+```
 ### Development Server
 
 ```bash
